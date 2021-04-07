@@ -1,0 +1,62 @@
+.container {
+	max-width: 120rem;
+	background-color: var(--color-grey-light-1);
+	margin: 8rem auto;
+	box-shadow: var(--shadow-dark);
+
+	min-height: 50rem;
+}
+
+.header {
+	height: 7rem;
+	font-size: 1.4rem;
+	background-color: var(--color-white);
+	border-bottom: 1px solid var(--color-grey-light-2);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.content {
+	display: flex;
+}
+
+.sidebar {
+	background-color: var(--color-grey-dark-1);
+	// width: 20% will work, but the property that we use to set the width of any flexbox item is "flex-basis". flex-basis: 18%;
+	flex: 0 0 18%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+}
+
+.hotel-view {
+	background-color: var(--color-white);
+	// we want this flex-item to occupy the entire remaining space left in the flex-container, so we use flex-grow: 1. flex: 1 0 0;
+	flex: 1;
+}
+
+.detail {
+	font-size: 1.4rem;
+	display: flex;
+	// by default align-items is set to stretch, this causes all the items to stretch if the height of one of the flex-items is larger than the rest.
+	padding: 4.5rem;
+	background-color: var(--color-grey-light-1);
+	border-bottom: var(--line);
+}
+
+.description {
+	background-color: var(--color-white);
+	box-shadow: var(--shadow-light);
+	padding: 3rem;
+	// flex: <flex-grow> <flex-shrink> <flex-basis>
+	flex: 0 0 60%;
+	margin-right: 4.5rem;
+}
+
+.user-reviews {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
