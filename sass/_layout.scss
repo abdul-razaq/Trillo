@@ -23,7 +23,7 @@
 
 .sidebar {
 	background-color: var(--color-grey-dark-1);
-	// width: 20% will work, but the property that we use to set the width of any flexbox item is "flex-basis". flex-basis: 18%;
+	// width: 18% will work, but the property that we use to set the width of any flexbox item in a flex-container is "flex-basis". flex-basis: 18%; shortcut is flex: 0 0 18%;
 	flex: 0 0 18%;
 	display: flex;
 	flex-flow: column nowrap;
@@ -32,7 +32,7 @@
 
 .hotel-view {
 	background-color: var(--color-white);
-	// we want this flex-item to occupy the entire remaining space left in the flex-container, so we use flex-grow: 1. flex: 1 0 0;
+	// we want this flex-item to occupy the entire remaining space left in the flex-container, so we use flex-grow: 1. flex: 1 0 0; or flex: 1;
 	flex: 1;
 }
 
